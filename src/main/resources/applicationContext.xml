@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--This is using getter and setters -->
+    <!-- bean definitions here -->
+    <!--<bean id="student" class="org.Example.Student">
+        <property name="name" value="John Doe"></property>
+    </bean>
+    <! Define Student bean -->
+    <!--<bean id="studentService" class="org.Example.StudentService">
+        <property name="student" ref="student"></property>
+    </bean>-->
+    <!-- bean definitions here -->
+    <bean id="student" class="org.Example.Student">
+    <constructor-arg value="John Doe" type="String"></constructor-arg>
+    </bean>
+    <bean id="studentService" class="org.Example.StudentService">
+        <constructor-arg value="student" type="String"></constructor-arg>
+    </bean>
+    </beans>
